@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Maquina {
 
 	private Ticket billete;
+	private 
 
 	
 	public void setBillete(Ticket billete) {

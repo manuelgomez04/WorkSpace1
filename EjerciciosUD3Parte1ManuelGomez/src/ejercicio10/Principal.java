@@ -1,5 +1,7 @@
 package ejercicio10;
 
+import java.util.Scanner;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -25,6 +27,7 @@ public class Principal {
 		
 		
 	// COMPRAR BILLETES
+		
 	// CALCULAR CAMBIO
 	// IMPRIMIR BILLETE
 	// SALDO TOTAL X DÍA
