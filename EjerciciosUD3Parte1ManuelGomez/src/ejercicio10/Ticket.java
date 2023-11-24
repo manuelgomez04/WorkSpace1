@@ -42,7 +42,7 @@ public class Ticket{
 	}
 
 	public String toString() {
-		return "Ticket Fecha= " + fecha + " \nPrecio Unitario= " + precioUnitario + "€ \nNúmero de personas= " + numPers;
+		return "Fecha = " + fecha + " \nPrecio Unitario = " + precioUnitario + "€ \nNúmero de personas = " + numPers;
 	}
 	
 	

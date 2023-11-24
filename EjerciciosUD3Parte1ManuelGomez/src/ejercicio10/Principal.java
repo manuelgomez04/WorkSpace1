@@ -13,24 +13,12 @@ public class Principal {
 		Maquina maq1 = new Maquina ();
 		Maquina maqSuma = new Maquina ();
 		Ticket billete2 = new Ticket (precioUnitario);
-	/* 10.Este programa tendría otra serie de clases, pero por simplificar lo haremos solo con 3 clases. Crear un
-		programa que simule una máquina vendedora de tickets de metro. Tendremos que crear la clase Ticket
-		(Clase POJO), la clase Maquina (donde estarán todos los métodos con funcionalidad) y la clase principal
-		de prueba. Tendrá un menú donde se pueda:
-		• Comprar uno o varios billetes.
-		• Calcular el cambio a devolver.
-		• Imprimir por pantalla el billete. Solo uno. Si se han comprado “x” debemos mostrar en el ticket el
-		mensaje “válido para x personas”.
-		• Opciones de operario: el operario que lleva el mantenimiento de la máquina, debe tener disponible
-		un método que le ofrezca el saldo total de la recaudación de la máquina en ese día (no es necesario
-		usar fechas) y otro método que pueda poner a cero el contador de saldo total.
-		• Dentro de la opción de operario, también debe contar con la posibilidad de cambiar el precio de
-		los billetes ya que estos suelen subir todos los años.
-		• Las operaciones para el operario se harán solo si se introduce la contraseña adecuada antes de
-		cualquier otra cosa, por lo que se debe tener el método comprobar contraseña.
-	*/
-
-	// COMPRAR BILLETES tick
+		//EL PRECIO TOTAL PODRÍA HACERSE COMO STATIC
+	
+		System.out.println("Bienvenido al metro.");
+		System.out.println();
+		System.out.println("Diga fecha de hoy (DD/MM/YYYY)");
+		fecha = sc.nextLine();
 		
 		do {
 			System.out.println();
@@ -43,8 +31,6 @@ public class Principal {
 				opcion = Integer.parseInt(aux);
 			switch (opcion) {
 			case 1:
-				System.out.println("Diga fecha de hoy");
-				fecha = sc.nextLine();
 				System.out.println("Diga número de personas");
 				aux= sc.nextLine();
 				numPers = Integer.parseInt(aux);
@@ -53,7 +39,7 @@ public class Principal {
 				maq1 = new Maquina (billete);
 				maq1.mostrarPrecio();
 				
-				maqSuma.calcTotal(maq1.calcPrecio());
+				maqSuma.calcTotal();
 				
 				 System.out.println();
 				 System.out.println(billete.toString());
@@ -66,6 +52,7 @@ public class Principal {
 				
 				while (pagado < maq1.calcPrecio()) {
 					System.out.println("Cantidad insuficiente");
+					System.out.println("Diga cantidad correcta");
 					aux = sc.nextLine();
 					pagado = Double.parseDouble(aux);
 				}
@@ -106,6 +93,8 @@ public class Principal {
 						System.out.println("Diga nuevo precio");
 						aux = sc.nextLine();
 						precioUnitario = Double.parseDouble(aux);
+						
+						// ESTO HABRÍA QUE METERLO EN UN MÉTODO.
 						billete2.setPrecioUnitario(precioUnitario);
 						System.out.println(billete2.toString());
 					break;

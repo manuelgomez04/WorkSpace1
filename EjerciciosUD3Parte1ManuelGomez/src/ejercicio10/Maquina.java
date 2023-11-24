@@ -47,8 +47,7 @@ public class Maquina {
 		return "Maquina [contrasena=" + contrasena + ", billete=" + billete + ", cantTot=" + cantTot + "]";
 	}
 	
-	
-	// CALCULAR CAMBIO
+	//ESTE MÉTODO PUEDE IR EN TICKET
 	
 	public double calcPrecio (){
 		
@@ -60,8 +59,8 @@ public class Maquina {
 		return cantPagada - calcPrecio();
 	}
 	
-	public double calcTotal (double suma) {	
-		 cantTot += suma ;
+	public double calcTotal () {	
+		 cantTot += calcPrecio() ;
 		 return cantTot;
 	}
 	
