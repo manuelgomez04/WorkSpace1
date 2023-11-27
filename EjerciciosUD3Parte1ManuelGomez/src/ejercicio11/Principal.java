@@ -59,7 +59,9 @@ public class Principal {
 				
 		g.mostrasSus(notas);
 		
-		a = new Alumno (nombre, )
+		a = new Alumno (nombre, notas, g.numSus(notas), curso, g.calcNotaMedia(notas));
+		
+	System.out.println(a.toString());
 		
 	}
 
