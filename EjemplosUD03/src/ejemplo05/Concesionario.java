@@ -1,7 +1,6 @@
 package ejemplo05;
 
 import java.util.Arrays;
-import java.util.Iterator;
 
 public class Concesionario {
 	
