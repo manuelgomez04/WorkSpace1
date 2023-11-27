@@ -3,7 +3,7 @@ package ejercicio11;
 
 
 public class GestionNotas {
-	Alumno a1 = new Alumno();
+	
 	
 	// Poner notas (Se rellena el array desde el main porque no se hacerlo desde aquí)
 	

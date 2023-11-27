@@ -16,7 +16,7 @@ public class Principal {
 		double notas [];
 		int tam, posicion;
 		double nota, nuevaNota, suma = 0, media = 0;
-		Alumno a = new Alumno ();
+		Alumno a;
 		GestionNotas g = new GestionNotas(); 
 	
 		System.out.println("Diga nombre");
@@ -58,6 +58,9 @@ public class Principal {
 		g.mostrarMedia(notas);
 				
 		g.mostrasSus(notas);
+		
+		a = new Alumno (nombre, )
+		
 	}
 
 }
