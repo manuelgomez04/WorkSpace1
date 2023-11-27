@@ -14,7 +14,9 @@ public class GestionNotas {
 		}
 	}
 	// Modificar nota (main)
-	
+	public void modificarNota (double notas [],int posicion, double nuevaNota) {
+		notas [posicion]= nuevaNota ;
+	}
 	public void mostrarNuevasNotas (double notas []) {
 		for (int i = 0; i < notas.length; i++) {
 			System.out.print(notas [i]+"\t");
@@ -22,7 +24,9 @@ public class GestionNotas {
 	}
 	
 	// Calcular nota media
-	public double calcNotaMedia (double notas [], double suma, double media) {
+	public double calcNotaMedia (double notas []) {
+		 double suma = 0;
+		double media;
 		for (int i = 0; i < notas.length; i++) {
 			suma += notas[i];
 		}
@@ -31,11 +35,13 @@ public class GestionNotas {
 		return media;
 	}
 	
-	public void mostrarMedia (double media) {
-		System.out.println(media);
+	public void mostrarMedia (double notas []) {
+		System.out.println(calcNotaMedia(notas));
 	}
 	//Num suspensos
-	public int numSus (double notas [], int numSusp) {
+	
+	public int numSus (double notas []) {
+		int numSusp = 0;
 		for (int i = 0; i < notas.length; i++) {
 			if (notas [i] <= 5 ) {
 				numSusp ++;
@@ -44,6 +50,11 @@ public class GestionNotas {
 		return numSusp;
 	}
 
+	public void mostrasSus(double notas []) {
+		
+		System.out.println(numSus(notas));
+	}
+	
 }
 	
 

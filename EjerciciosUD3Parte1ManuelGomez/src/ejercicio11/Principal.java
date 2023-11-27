@@ -49,12 +49,15 @@ public class Principal {
 		aux = sc.nextLine();
 		nuevaNota = Double.parseDouble(aux);
 		
-		nuevaNota = notas [posicion];
+		g.modificarNota(notas, posicion, nuevaNota);
+		
+		g.mostrarNuevasNotas(notas);
 		
 		System.out.println("Calcular nota media");
-		g.calcNotaMedia(notas, suma, media);
-		g.mostrarMedia(media);
+		g.calcNotaMedia(notas);
+		g.mostrarMedia(notas);
 				
+		g.mostrasSus(notas);
 	}
 
 }
