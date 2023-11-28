@@ -5,15 +5,15 @@ public class Producto {
 	private String nombre;
 	private String codigo;
 	private String fechaAlta;
-	private int cantidad;
+	private String fragil;
 	
-	public Producto(double precioFabrica, String nombre, String codigo, String fechaAlta, int cantidad) {
+	public Producto(double precioFabrica, String nombre, String codigo, String fechaAlta, String fragil) {
 		
 		this.precioFabrica = precioFabrica;
 		this.nombre = nombre;
 		this.codigo = codigo;
 		this.fechaAlta = fechaAlta;
-		this.cantidad = cantidad;
+		this.fragil = fragil;
 	}
 
 	public Producto() {
@@ -52,16 +52,19 @@ public class Producto {
 		this.fechaAlta = fechaAlta;
 	}
 
-	public int getCantidad() {
-		return cantidad;
+	public String getFragil() {
+		return fragil;
 	}
 
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
+	public void setFragil(String fragil) {
+		this.fragil = fragil;
 	}
 	
-	public double calcPrecioCosto (double costoTransporte) {
-		return precioFabrica - costoTransporte;
+	public double calcPrecio (double costoTransporte) {
+		double precioCosto;
+		
+		precioCosto = precioFabrica + costoTransporte;
+		return precioCosto;
 	}
 	
 	

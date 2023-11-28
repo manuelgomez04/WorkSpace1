@@ -39,6 +39,7 @@ public class Principal {
 		for (int i=0; i<c.getnVs(); i++){
 			System.out.println (lista[i]);
 		}
+		
 		System.out.println("Diga tope de caballos");
 		aux = sc.nextLine();
 		tope = Integer.parseInt(aux);
