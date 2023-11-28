@@ -1,15 +1,15 @@
 package ejercicio01;
 
 public class Producto {
-	private double precioFabrica;
+	private double precioCosto;
 	private String nombre;
 	private String codigo;
 	private String fechaAlta;
-	private String fragil;
+	private int fragil;
 	
-	public Producto(double precioFabrica, String nombre, String codigo, String fechaAlta, String fragil) {
+	public Producto(double precioCosto, String nombre, String codigo, String fechaAlta, int fragil) {
 		
-		this.precioFabrica = precioFabrica;
+		this.precioCosto = precioCosto;
 		this.nombre = nombre;
 		this.codigo = codigo;
 		this.fechaAlta = fechaAlta;
@@ -20,12 +20,12 @@ public class Producto {
 		
 	}
 
-	public double getPrecioFabrica() {
-		return precioFabrica;
+	public double getPrecioCosto() {
+		return precioCosto;
 	}
 
-	public void setPrecioFabrica(double precioFabrica) {
-		this.precioFabrica = precioFabrica;
+	public void setPrecioCosto(double precioFabrica) {
+		this.precioCosto = precioFabrica;
 	}
 
 	public String getNombre() {
@@ -52,19 +52,27 @@ public class Producto {
 		this.fechaAlta = fechaAlta;
 	}
 
-	public String getFragil() {
+	public int getFragil() {
 		return fragil;
 	}
 
-	public void setFragil(String fragil) {
+	public void setFragil(int fragil) {
 		this.fragil = fragil;
 	}
 	
-	public double calcPrecio (double costoTransporte) {
-		double precioCosto;
+	public double calcPrecio (double porcentaje) {
 		
-		precioCosto = precioFabrica + costoTransporte;
-		return precioCosto;
+		double precioFabrica;
+		
+		precioFabrica = precioCosto - (precioCosto*porcentaje/100);
+		
+		return precioFabrica;
+	}
+	
+	public double calcPVP (double porcentajePVP) {
+		double PVP = 0;
+		PVP = precioCosto+(precioCosto*porcentajePVP/100);
+		return PVP;
 	}
 	
 	
