@@ -79,7 +79,7 @@ public class Tienda {
 			return totaal;
 		}
 		
-		public void mostrarPVP (double porcentajePVP) {
+		public void mostrarTot (double porcentajePVP) {
 			System.out.println("Si vendemos todos los productos, las ganancias serán: "+calcTot(porcentajePVP));
 		}
 

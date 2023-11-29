@@ -9,16 +9,15 @@ public class Principal {
 		String aux, nombre, codigo, fechaAlta;
 		int fragil, opcion2;
 		int tam, seguir, posicion;
-		double precioCosto, porcentajeTransporte = 5, porcentajePVP = 10, pvp;
+		double precioCosto, porcentajeTransporte = 5, porcentajePVP = 10;
 		int opcion;
 		Producto lista [];
 		Tienda t;
-		Tienda t0 = new Tienda();
-		Producto p = new Producto();
+	
 		
 		do {
 			System.out.println("""
-					0 ---> Seguir
+					0 ---> Salir
 					1 ---> Rellenar listado de productos
 					""");
 			aux = sc.nextLine();
@@ -87,7 +86,7 @@ public class Principal {
 							break;
 							case 3:
 								t.calcTot(porcentajePVP);
-								t.mostrarPVP(porcentajePVP);
+								t.mostrarTot(porcentajePVP);
 							break;
 							case 4:
 								System.out.println("Diga el producto el cual quiere comprobar");
