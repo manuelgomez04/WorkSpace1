@@ -9,7 +9,7 @@ public class Principal {
 		Scanner sc = new Scanner (System.in);
 		
 		String aux, nombreCliente;
-		boolean ocupada, limpia, servicioExtra, miniBar, extra;
+		boolean ocupada, limpia, servicioExtra;
 		int auxx, codigo, opcion;
 		double precioBase = 100 ;
 		int diasContratados, tipo, tam = 5, seguir, numHab = 0;
@@ -139,6 +139,9 @@ public class Principal {
 						break;
 						
 						case 3:
+							System.out.println("Diga que producto desea buscar");
+							aux = sc.nextLine();
+							codigo = Integer.parseInt(aux);
 							ho.mostrarFactura(codigo, servicioExtra, porcentajeSuit, porcentajeDoble, porcentajeSuitJunior, porcentajeExtra, diasContratados);
 							
 						break;

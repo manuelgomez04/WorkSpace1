@@ -1,12 +1,19 @@
 package ejercicio03;
 
+import java.util.Scanner;
+
 public class Principal {
 
 	public static void main(String[] args) {
-		/*Vamos a intentar modelar a un vendedor "callejero" móviles. Los atributos de la clase Móvil serán, como
-		mínimo, marca, modelo, vendido o no, nuevo o de segunda mano y precio unitario. En la clase Vendedor
-		tendremos como características un array de Móviles y total vendido (se pueden añadir más atributos si se
-		quiere o precisa). Se deben crear métodos que hagan las siguientes operaciones:
+		Scanner sc = new Scanner (System.in);
+		String aux;
+		Movil lista []  = new Movil [4];
+		Vendedor v = new Vendedor (lista, 0);
+		
+		Movil m = new Movil ("Samsung", "Young 2", false, true, 300.0, 15 );
+		
+		
+		/*
 		- Comprobar cuántos móviles le quedan sin vender.
 		- Mostrar precio final de un producto haciendo algún descuento al precio unitario si es de segunda mano.
 		- Podemos incluir también, si se quiere, la posibilidad de ofrecer cambio.
@@ -14,6 +21,13 @@ public class Principal {
 		- Escribir también una clase de prueba para hacer todas las operaciones.*/
 		
 		
+		
+		v.agregar(m);
+		m = new Movil ("Samsung", "Young 2", false, true, 300.0, 15 );
+		v.agregar(m);
+		
+		v.comprobarSinVender();
+		v.mostrarSinVender();
 	}
 
 }
