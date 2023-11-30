@@ -86,6 +86,20 @@ public class Vendedor {
 	
 	// - Podemos incluir también, si se quiere, la posibilidad de ofrecer cambio.
 	
+	public double calcCambio (double pagado, int codigo) {
+		double cambio = 0;
+		int index = buscar (codigo);
+		
+		cambio = pagado - lista[index].getPrecioUnitario();
+		
+		return cambio;
+		
+	}
+	
+	public void mostrarCambio (double pagado, int codigo) {
+		System.out.println("Su cambio será "+calcCambio(pagado, codigo));
+	}
+	
 	
 	// - Calcular cuánto dinero se debe tener en el bolsillo cuando se hayan vendido todos los móviles.
 	

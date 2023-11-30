@@ -50,7 +50,7 @@ public class Hotel {
 		
 		
 	}
-	public int buscarHab ( Habitacion h) {
+/*	public int buscarHab ( Habitacion h) {
 		int i = 0;
 		boolean encontrado = false;
 		
@@ -69,7 +69,7 @@ public class Hotel {
 		
 		
 		
-	}
+	}*/
 	
 	public int findByIdV2(int codigo) {
 		int i = 0;
@@ -91,8 +91,7 @@ public class Hotel {
 	public void mostrarBuscado (int codigo, double porcentajeSuit, double porcentajeDoble, double porcentajeSuitJUnior) {
 		int index = findByIdV2(codigo);
 		
-		System.out.println(lista [index].getCodigo()+"\n "+lista[index].getDiasContratados()+"\n "+lista [index].isLimpio()+"\n "+
-		lista[index].isOcupada()+"\n "+lista[index].isServiciosExtras()+"\n m"+lista[index].getNombreCliente()+"\n " 
+		System.out.println(lista [index].toString() 
 				+ lista[index].calcPrecioFinalPDia(porcentajeDoble,porcentajeSuit, porcentajeSuitJUnior));
 	}
 	

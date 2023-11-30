@@ -7,10 +7,11 @@ public class Principal {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
 		String aux;
+		double pagado;
 		Movil lista []  = new Movil [4];
 		Vendedor v = new Vendedor (lista, 0);
 		
-		Movil m = new Movil ("Samsung", "Young 2", false, true, 300.0, 15 );
+		Movil m = new Movil ("Samsung", "Young 2", false, true, 300.0, 1 );
 		
 		
 		/*
@@ -23,11 +24,18 @@ public class Principal {
 		
 		
 		v.agregar(m);
-		m = new Movil ("Samsung", "Young 2", false, true, 300.0, 15 );
+		m = new Movil ("Samsung", "Young 2", false, true, 300.0, 12);
 		v.agregar(m);
 		
 		v.comprobarSinVender();
 		v.mostrarSinVender();
+		
+		System.out.println("Diga con cuanto pagará");
+		aux = sc.nextLine();
+		pagado = Double.parseDouble(aux);
+		
+		v.calcCambio(pagado, 1);
+		v.mostrarCambio(pagado, 1);
 	}
 
 }

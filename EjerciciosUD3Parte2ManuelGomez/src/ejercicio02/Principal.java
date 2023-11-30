@@ -16,7 +16,8 @@ public class Principal {
 		double porcentajeSuit = 20, porcentajeDoble = 5, porcentajeSuitJunior = 10, porcentajeExtra = 5, porcentajeMiniBar  = 3;
 		Habitacion h;
 		Habitacion lista [] = new Habitacion [tam];
-		Hotel ho = new Hotel(lista,0);
+		Hotel ho;
+		
 		
 	/*2. Estoy en crisis. He pensado en alquilar las habitaciones de mi casa, pero estilo hotel para que tenga caché.
 	Debemos gestionar mi “minihotel” y para ello, debemos crear la clase Habitación, una clase Hotel con una
@@ -105,9 +106,10 @@ public class Principal {
 					seguir = Integer.parseInt(aux);
 					
 					h = new Habitacion (tipo,precioBase,servicioExtra,nombreCliente,diasContratados,limpia,ocupada,codigo);
+					ho = new Hotel(lista,0);
 					ho.agregar(h);
 					
-				} while (seguir!= 0&& numHab < lista.length);
+				} while (seguir!= 0 && numHab < lista.length);
 				
 				do {
 					System.out.println("""
