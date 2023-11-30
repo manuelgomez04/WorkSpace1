@@ -1,6 +1,6 @@
 package ejercicio03;
 
-import java.util.Iterator;
+
 
 public class Vendedor {
 	
@@ -38,10 +38,14 @@ public class Vendedor {
 	
 	public int comprobarSinVender() {
 		int contador = 0;
-
-		for (int i = 0; i < numMv; i++) {
-			if (lista[i].isVendido());
-			contador ++;
+		int i = 0;
+		
+		while ( i < numMv) {
+			if(lista[i].isVendido()== true) {
+				contador ++;
+			} else {
+				
+			}
 		}
 		
 		return contador; 
@@ -58,7 +62,7 @@ public class Vendedor {
 		
 		while(i < lista.length && !resultado) {
 			
-			if(lista[i].getCodigo()== codigo) {
+			if(lista[i].getCodigo() == codigo) {
 				resultado = true;
 			} else i++;
 		} if (resultado) {
@@ -84,6 +88,10 @@ public class Vendedor {
 		return precioDesc;
 	}
 	
+	public void mostrarPrecio (int codigo) {
+		System.out.println("El precio del teléfono es: "+calcPrecioDescuento(codigo));
+	}
+	
 	// - Podemos incluir también, si se quiere, la posibilidad de ofrecer cambio.
 	
 	public double calcCambio (double pagado, int codigo) {
@@ -104,7 +112,29 @@ public class Vendedor {
 	// - Calcular cuánto dinero se debe tener en el bolsillo cuando se hayan vendido todos los móviles.
 	
 	
+	public double totalVendido() {
+		double total = 0;
+		for (int i = 0; i < numMv; i++) {
+			if (lista[i].isVendido()) {
+				total += lista[i].getPrecioUnitario();
+			}
+			
+		
+		}
+			
+		
+		return total;
+		
+	}
 	
+	public void mostrarTotal () {
+		System.out.println("El total vendido es "+totalVendido());
+	}
 	
+	public void vendido(int codigo) {
+		int index = buscar(codigo);
+		
+		lista[index].setVendido(true);
+	}
 	
 }
