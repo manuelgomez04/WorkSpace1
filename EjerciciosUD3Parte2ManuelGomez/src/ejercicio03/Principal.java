@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
 		String aux, marca, modelo;
-		boolean vendido = true, segundaMano;
+		boolean vendido = false, segundaMano;
 		int opcion, seguir, numMv = 0, segunM, codMV;
 		double pagado, precioUnitario;
 		Movil lista []  = new Movil [4];

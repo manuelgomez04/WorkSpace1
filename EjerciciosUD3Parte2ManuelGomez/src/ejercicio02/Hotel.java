@@ -87,6 +87,28 @@ public class Hotel {
 		else
 			return -1;
 	}
+	
+	public Habitacion buscar (String codigo) {
+		int i = 0;
+		boolean encontrado = false;
+		
+		
+		while(i < lista.length  && !encontrado ) {
+			
+			if(lista[i].getNombreCliente().equalsIgnoreCase(codigo)) {
+				encontrado = true;
+				
+			} else {
+				i++;
+			}
+		}
+		if (encontrado) {
+			return lista[i];
+		} else {
+			return null;
+		}
+		
+	}
 
 	public void mostrarBuscado (int codigo, double porcentajeSuit, double porcentajeDoble, double porcentajeSuitJUnior) {
 		int index = findByIdV2(codigo);

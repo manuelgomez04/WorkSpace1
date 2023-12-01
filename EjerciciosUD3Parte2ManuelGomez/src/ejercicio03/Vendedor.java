@@ -38,16 +38,13 @@ public class Vendedor {
 	
 	public int comprobarSinVender() {
 		int contador = 0;
-		int i = 0;
-		
-		while ( i < numMv) {
-			if(lista[i].isVendido()== true) {
-				contador ++;
-			} else {
-				
-			}
+		for (int i = 0; i < numMv; i++) {
+			if (lista[i].isVendido()== false) {
+				contador ++;	
+		} else {
+			
 		}
-		
+	}
 		return contador; 
 	}
 	
