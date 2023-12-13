@@ -61,6 +61,7 @@ public class Principal {
 				
 				} while (opcion != 1 && t.getNumProduct()< lista.length );
 				break;
+				
 			case 0 :
 				System.out.println("Gracias por usar un programa");
 			break;
