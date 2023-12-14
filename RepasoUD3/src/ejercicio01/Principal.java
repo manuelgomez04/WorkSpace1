@@ -63,7 +63,7 @@ public class Principal {
 				break;
 				
 			case 0 :
-				System.out.println("Gracias por usar un programa");
+				System.out.println("Gracias por usar el programa");
 			break;
 			
 			default:

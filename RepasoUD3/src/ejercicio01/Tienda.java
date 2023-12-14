@@ -49,6 +49,18 @@ public class Tienda {
 		lista [numProduct++] = p; 	
 	}
 	
-
+	public void mostrar () {
+		for (int i = 0; i < numProduct; i++) {
+			System.out.println(lista[i]);
+		}
+	}
+	
+	public int buscarCategoria () {
+		boolean encontrado = false;
+		int i = 0;
+		
+		
+		
+	}
 	
 }
