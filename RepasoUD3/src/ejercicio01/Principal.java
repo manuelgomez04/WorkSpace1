@@ -11,16 +11,18 @@ public class Principal {
 		double pFabrica;
 		int seccion;
 		boolean activo;
-		int activoo, opcion, tam = 15;
+		int activoo, opcion, opcion2, tam = 15,  id = 1;
 		Tienda t;
 		Producto p; 
 		Producto lista [] = new Producto [tam];
+		
 		
 		
 		do {
 			System.out.println("""
 					0 ---> Salir
 					1 ---> Rellenar productos
+					
 					""");
 			aux  = sc.nextLine();
 			opcion = Integer.parseInt(aux);
@@ -49,21 +51,54 @@ public class Principal {
 				}else {
 					activo = false;
 				}
-				
-				
+
+				id++;
 				
 				t = new Tienda(lista, 5);
-				t.agregar(new Producto (nombre, pFabrica, seccion, activo));
+				t.agregar(new Producto (nombre, pFabrica, seccion, activo, id));
 				
-				System.out.println("1 para salir, cualquier número para seguir");
+				System.out.println("0 para salir, cualquier número para seguir");
 				aux = sc.nextLine();
 				opcion = Integer.parseInt(aux);
 				
-				} while (opcion != 1 && t.getNumProduct()< lista.length );
+				} while (opcion != 0 && t.getNumProduct()< lista.length );
+				
+				do {
+					
+				
+				
+					System.out.println("""
+							1 ---> Mostrar lista
+							2 ---> Buscar por seccion
+							""");
+					aux = sc.nextLine();
+					opcion2 = Integer.parseInt(aux);
+					
+					switch (opcion2) {
+					
+					
+						case 1:
+							t.mostrar();
+						break;
+						
+						case 2: 
+							System.out.println("Diga seccion");
+							aux = sc.nextLine();
+							seccion = Integer.parseInt(aux);
+							
+							t.mostarListaNoNull(t.buscarBySeccion(seccion));
+						 
+						default:
+						break;
+					}
+				
+				} while (opcion2 != 0);
 				break;
 				
 			case 0 :
+				
 				System.out.println("Gracias por usar el programa");
+				
 			break;
 			
 			default:

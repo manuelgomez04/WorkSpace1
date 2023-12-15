@@ -55,12 +55,55 @@ public class Tienda {
 		}
 	}
 	
-	public int buscarCategoria () {
+	public int buscarId (int id) {
 		boolean encontrado = false;
 		int i = 0;
 		
+		while (!encontrado && i < numProduct) {
+			if (lista[i].getId() == id) {
+				encontrado = true;
+			} else {
+				i++;
+			}
+		}
 		
+		if (encontrado) {
+			return i;
+		} else {
+			return -1;
+		}
+	}
+	
+	/*Buscar por sección*/
+	
+	public Producto [] buscarBySeccion (int categoria) {
+		int i = 0;
+		Producto listaEncontrados [] = new Producto [numProduct];
+		
+		while ( i < numProduct) {
+			if (lista[i].getSeccion() == categoria) {
+				
+				listaEncontrados[i] = lista [i];
+				
+			} 
+			i++; 
+		}
+		
+			return listaEncontrados;
 		
 	}
 	
+	/*ESTE MÉTODO MUESTRA CUALQUIER LISTA DE PRODUCTO*/
+	public void mostarListaNoNull (Producto pLista []) {
+		for (int i = 0; i < pLista.length; i++) {
+			if (lista[i] != null) {
+			System.out.println(pLista[i]);
+			}
+		}
+	}
+	
+	
+	/*public Producto buscarMasBarato () {
+		
+	}*/
 }
