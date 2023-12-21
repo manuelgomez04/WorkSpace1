@@ -69,16 +69,43 @@ public class Inmobiliaria {
 			return null;
 		}
 	}
-	/**
-	 * Calcula precio final de venta del piso
-	 * @param id Identificador del piso
-	 * @return precio final
-	 */
-	 public double calcularPrecioFinalVenta(int id ) {
-	 Piso p = buscarPiso(id);
+	
+	public double calcularPrecioFinalVenta(int id, double porcentaje) {
+		Piso p = buscarPiso(id);
 
-	 return p.getPrecioVenta();
+		return p.getPrecioVenta() + (p.getPrecioVenta() * porcentaje);
 
-	 }
+	}
+
+	public void mostrarLista(Piso[] plista) {
+
+		for (int i = 0; i < lista.length; i++) {
+			if (plista[i] != null) {
+				System.out.println(plista[i]);
+			}
+		}
+
+	}
+
+	public Piso[] obtenerNuevos() {
+
+		Piso p[] = new Piso[numPisos];
+
+		for (int i = 0; i < numPisos; i++) {
+			if (lista[i].getEstado() == 1) {
+				p[i] = lista[i];
+			}
+		}
+		return p;
+
+	}
+
+	public void modificarPrecio(double nuevoPrecio, int id) {
+		Piso p = buscarPiso(id);
+
+		p.setPrecioVenta(nuevoPrecio);
+
+	}
+
 
 }
