@@ -2,6 +2,11 @@ package ejercicio01;
 
 import java.util.Scanner;
 
+/**
+ * @author gomez.maman24_triana
+ * @see fdghklsdjfklhgsdñkjlfdgklsjx
+ */
+
 public class Principal {
 
 	public static void main(String[] args) {
