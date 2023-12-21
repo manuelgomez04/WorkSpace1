@@ -1,5 +1,7 @@
 package ejercicio;
 
+
+
 import java.util.Arrays;
 
 public class Inmobiliaria {
@@ -47,6 +49,8 @@ public class Inmobiliaria {
 
 		lista[numPisos++] = p;
 	}
+	
+	
 
 	public Piso buscarPiso(int id) {
 		int i = 0;
@@ -65,12 +69,16 @@ public class Inmobiliaria {
 			return null;
 		}
 	}
+	/**
+	 * Calcula precio final de venta del piso
+	 * @param id Identificador del piso
+	 * @return precio final
+	 */
+	 public double calcularPrecioFinalVenta(int id ) {
+	 Piso p = buscarPiso(id);
 
-	// public double calcularPrecioFinalVenta(int id ) {
-	// Piso p = buscarPiso(id);
+	 return p.getPrecioVenta();
 
-	// return p.getPrecioVenta()*
-
-	// }
+	 }
 
 }

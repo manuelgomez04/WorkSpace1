@@ -8,6 +8,7 @@ public class Piso {
 	private double precioVenta;
 	private int id;
 
+	
 	public Piso(String direccion, int superficie, int estado, double precioVenta, int id) {
 		this.direccion = direccion;
 		this.superficie = superficie;
