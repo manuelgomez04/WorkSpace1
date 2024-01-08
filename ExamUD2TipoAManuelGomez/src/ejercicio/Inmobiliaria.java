@@ -1,5 +1,7 @@
 package ejercicio;
 
+
+
 import java.util.Arrays;
 
 public class Inmobiliaria {
@@ -47,6 +49,8 @@ public class Inmobiliaria {
 
 		lista[numPisos++] = p;
 	}
+	
+	
 
 	public Piso buscarPiso(int id) {
 		int i = 0;
@@ -65,7 +69,7 @@ public class Inmobiliaria {
 			return null;
 		}
 	}
-
+	
 	public double calcularPrecioFinalVenta(int id, double porcentaje) {
 		Piso p = buscarPiso(id);
 
@@ -103,6 +107,7 @@ public class Inmobiliaria {
 
 	}
 
+<<<<<<< HEAD
 	public double calcMetroCuadrado(int id, double porcentaje) {
 		Piso p = buscarPiso(id);
 
@@ -133,5 +138,7 @@ public class Inmobiliaria {
 		return gananciaVendedor;
 
 	}
+=======
+>>>>>>> 0a37a42edbda87b4e7ebb9af1e6fb76706f343fa
 
 }

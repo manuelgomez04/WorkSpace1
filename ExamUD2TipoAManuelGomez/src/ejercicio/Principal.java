@@ -1,9 +1,16 @@
 package ejercicio;
 
 import java.util.Scanner;
+ /**
+  * @author Manuel Gomez
+  * @version 0.2
+  * @since 0.1
+  * @see 
+  * 
+  */
 
 public class Principal {
-
+ 
 	public static void main(String[] args) {
 
 		int opcion, opcion2, tam = 15, numPisos = 0, superficie, estado, estadoBuscar, numTrabajadores = 5;
