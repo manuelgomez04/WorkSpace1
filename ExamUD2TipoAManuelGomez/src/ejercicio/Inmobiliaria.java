@@ -83,7 +83,7 @@ public class Inmobiliaria {
 
 	}
 
-	public Piso[] obtenerNuevos() {
+	public Piso[] obtenerSeccion(int estado) {
 
 		Piso p[] = new Piso[numPisos];
 
@@ -100,6 +100,37 @@ public class Inmobiliaria {
 		Piso p = buscarPiso(id);
 
 		p.setPrecioVenta(nuevoPrecio);
+
+	}
+
+	public double calcMetroCuadrado(int id, double porcentaje) {
+		Piso p = buscarPiso(id);
+
+		return calcularPrecioFinalVenta(id, porcentaje) / p.getSuperficie();
+
+	}
+
+	/*
+	 * public double calcGananciasSeccion(int estado) {
+	 * 
+	 * Piso p[] = new Piso[numPisos]; obtenerSeccion(estado); for (int i = 0; i <
+	 * lista.length; i++) {
+	 * 
+	 * }
+	 * 
+	 * }
+	 */
+
+	public double calcGananciaPorVendedor() {
+		double gananciaVendedor = 0;
+
+		for (int i = 0; i < numPisos; i++) {
+			if (lista[i].getEstado() == 2) {
+				gananciaVendedor += lista[i].getPrecioVenta();
+			}
+		}
+
+		return gananciaVendedor;
 
 	}
 
